@@ -1,0 +1,55 @@
+.h1{
+    text-align: center;
+    color: rgb(115, 61, 182);
+}
+
+.botao{
+    padding: 20px;
+    text-align: center;
+    
+    & button{
+        padding: 10px;
+    }
+}
+
+
+
+.tblEstilo{
+    border: 2px solid #ccc;
+    border-collapse: collapse;
+    margin: 0 auto;
+
+    & thead{
+        background-color:rgb(134, 80, 227);
+
+        & th{
+            border: 2px solid #ccc;
+            padding: 10px;
+        }
+    }
+
+    & tbody{
+        & tr{
+            &:hover{
+                background-color: #e2e2e2;
+            }
+
+            & td{
+                border: 2px solid #ccc;
+                padding: 10px;
+                &:first-child{
+                    text-align: center;
+                }
+                &:nth-child(5){
+                    text-align: center;
+                }
+                &:nth-child(6){
+                    text-align: center;
+                }
+                &:nth-child(7){
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
