@@ -1,0 +1,51 @@
+.cabecalho{
+    display: flex;
+    flex-direction: row;
+    background-color:rgb(119, 95, 160);
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-around;
+    align-items: center;
+
+    & h1{
+        text-align: center;
+    }
+
+    & img{
+        width: 5%;
+    }
+
+    & nav{
+        float: right;
+        
+        & ul{
+            list-style: none;
+
+            & li{
+                display: inline-block;
+                
+                & a{
+                    text-decoration: none;
+                    color: #fff;
+                    display: block;
+                    font-weight: bold;
+                    padding: 50px 10px;
+                    background-color: rgb(76, 0, 139);
+                    transition: background-color ease-out 300ms, color ease-out 300ms;
+
+                    &:hover{
+                        background-color: white;
+                        color: rgb(76, 0, 139);
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+.active{
+    background-color: #bba2df !important;
+    color: rgb(44, 0, 139) !important;
+}
