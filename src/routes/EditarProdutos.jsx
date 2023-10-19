@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-
+import "./inserir.scss"
 export default function EditarProdutos() {
 
   //Recuperando o parêmetro ID com o HOOK useParams();
@@ -48,10 +48,9 @@ export default function EditarProdutos() {
 
 
   return (
-    <div>
+    <div className='tudo'>
       <h1>EDITAR PRODUTOS</h1>
 
-      <div>
         <form onSubmit={handleSubmit}>
           <fieldset>
             <legend>Produto Selecionado</legend>
@@ -76,7 +75,6 @@ export default function EditarProdutos() {
             </div>
           </fieldset>
         </form>
-      </div>
     </div>
   )
 }

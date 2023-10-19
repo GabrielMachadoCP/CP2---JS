@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Produtos.scss";
 import { AiFillEdit as Editar } from "react-icons/ai";
 import { MdDeleteForever as Excluir } from "react-icons/md";
@@ -9,6 +9,8 @@ import ModalAction from "../components/ModalAction/ModalAction";
 
 export default function Produtos() {
   document.title = "Lista de Produtos";
+
+  const rotaAtual = useLocation();
 
   const [listaProdutosLocal, setListaProdutosLocal] = useState([{}]);
 
@@ -39,8 +41,6 @@ export default function Produtos() {
                   <th>DESCRIÇÃO</th>
                   <th>PREÇO</th>
                   <th>EDITAR</th>
-                  <th>EXCLUIR</th>
-                  <th>INSERIR</th>
                 </tr>
               </thead>
               <tbody>
@@ -52,8 +52,6 @@ export default function Produtos() {
                       <td>{item.desc}</td>
                       <td>{item.preco}</td>
                       <td> <Link to={`/editar/produtos/${item.id}`}><Editar/></Link></td>
-                      <td> <Link to={`/excluir/produtos/${item.id}`}><Excluir/></Link> </td>
-                      <td> <Link to={`/inserir/produtos`}><Inserir/></Link> </td>
                     </tr>
                   ))
                 }
@@ -65,6 +63,13 @@ export default function Produtos() {
               </tfoot>
             </table>
           </div>
+
+      <nav className="inserirExcluir">
+        <ul>
+          <li><Link to="/excluir/produtos" className={rotaAtual.pathname == `/excluir/produtos/`?"active":""}>EXCLUIR</Link></li>
+          <li><Link to="/inserir/produtos" className={rotaAtual.pathname == "/inserir/produtos"?"active":""}>INSERIR</Link> </li>
+        </ul>
+      </nav>   
 
     </div>
   )
