@@ -1,14 +1,51 @@
 .h1{
     text-align: center;
-    color: rgb(115, 61, 182);
+    color: rgb(55, 13, 84);
 }
 
 .botao{
     padding: 20px;
     text-align: center;
-    
+   
     & button{
         padding: 10px;
+    }
+}
+
+.inserirExcluir{
+    display: flex;
+    flex-direction: row;
+    background-color:#e2e2e2;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    height: 19vh;
+        
+    & ul{
+        list-style: none;
+
+        & li{
+            display: inline-block;
+            padding: 10px;
+            
+            & a{
+                text-decoration: none;
+                color: #fff;
+                display: block;
+                font-weight: bold;
+                padding: 30px 10px;
+                background-color: rgb(76, 0, 139);
+                border-radius: 100px;
+                transition: background-color ease-out 300ms, color ease-out 300ms;
+
+                &:hover{
+                    background-color: white;
+                    color: rgb(76, 0, 139);
+                }
+            }
+        }
     }
 }
 
