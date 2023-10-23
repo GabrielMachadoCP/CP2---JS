@@ -1,3 +1,5 @@
+import "./Rodape.scss"
+
 export default function Rodape() {
     return (
       <>
