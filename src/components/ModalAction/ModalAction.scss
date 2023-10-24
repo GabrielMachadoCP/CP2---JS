@@ -7,8 +7,104 @@
     top: 0;
     left: 0;
     z-index: 1000;
+    
     h1{
         text-align: center;
     }
     
+    .tudo{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        min-height: 77vh;
+    
+        h1{
+            text-align: center;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+        }
+    
+        label{
+            font-size: 20px;
+            color: rgb(194, 144, 255);
+            padding: 20px;
+        }
+    
+        select{
+            padding: 10px;
+        }
+    
+        .delete{
+            padding: 20px;
+            & :hover{
+                background-color:  white;
+                border: solid 2px red;
+                color:  red ;
+            }
+        }
+        button{
+            padding: 20px;
+            color: white;
+            background-color: rgb(70, 31, 161);
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 100px;
+            border: solid black 2px;
+            
+            &:hover{
+                background-color: white;
+                border: white solid 1px;
+                color: rgb(76, 0, 139);
+            }
+        }
+    }
+    
+    
+    form{
+        width: 50%;
+        justify-content: center;
+    
+        fieldset{
+            padding: 15px;
+            border: dotted rgb(200, 153, 238) 3px;
+    
+            legend{
+                font-size: 20px;
+                color: rgb(255, 255, 255);
+            }
+    
+            label{
+                font-size: 18px;
+                display: inline-block;
+                width: 30%; 
+                text-align: left;
+                margin-right: 10px; 
+                color: rgb(123, 55, 206);
+            }
+    
+            input{
+                display: inline-block;
+                padding: 7px;
+                width: 68%;
+                background-color: rgba(74, 10, 158, 0.493);
+                color: white;
+                border-radius: 5px;
+                border: solid black 2px;
+            }
+    
+            input::placeholder{
+                color: white
+            }
+    
+            button{
+                padding: 10px;
+                background-color: rgb(98, 65, 145);
+                color: white;
+                border: solid rgb(0, 0, 0) 3px;
+                border-radius: 5px;
+            }
+        }
+    }
 }

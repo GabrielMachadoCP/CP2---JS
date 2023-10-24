@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import "./inserir.scss"
 export default function EditarProdutos() {
 
   //Recuperando o parêmetro ID com o HOOK useParams();

@@ -8,7 +8,21 @@
     text-align: center;
    
     & button{
-        padding: 10px;
+        padding: 30px 10px;
+        background-color: rgb(76, 0, 139);
+        color: #fff;
+        border-radius: 100px;
+        transition: background-color ease-out 300ms, color ease-out 300ms;
+        border: solid 1px rgb(76, 0, 139);
+        font-weight: bold;
+        font-size: 15px;
+
+
+        &:hover{
+            background-color: white;
+            border: white solid 1px;
+            color: rgb(76, 0, 139);
+        }
     }
 }
 

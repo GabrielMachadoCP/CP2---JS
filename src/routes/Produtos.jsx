@@ -30,7 +30,7 @@ export default function Produtos() {
       <h1 className="h1">Lista de Produtos</h1>
 
         <ModalAction open={open} setClose={setOpen}/>
-        <div className="botao"><button onClick={()=>setOpen(true)}>OPEN-MODAL</button></div>
+        <div className="botao"><button onClick={()=>setOpen(true)}>INSERIR PRODUTOS</button></div>
         
           <div>
             <table className="tblEstilo">
@@ -67,7 +67,6 @@ export default function Produtos() {
       <nav className="inserirExcluir">
         <ul>
           <li><Link to="/excluir/produtos" className={rotaAtual.pathname == `/excluir/produtos/`?"active":""}>EXCLUIR</Link></li>
-          <li><Link to="/inserir/produtos" className={rotaAtual.pathname == "/inserir/produtos"?"active":""}>INSERIR</Link> </li>
         </ul>
       </nav>   
 
