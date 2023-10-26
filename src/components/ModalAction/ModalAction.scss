@@ -18,6 +18,7 @@
         padding: 10px;
         justify-content: center;
         align-items: center;
+        text-align: center;
         min-height: 77vh;
     
         h1{
@@ -55,7 +56,7 @@
             
             &:hover{
                 background-color: white;
-                border: white solid 1px;
+                border: white solid 2px;
                 color: rgb(76, 0, 139);
             }
         }
@@ -68,20 +69,21 @@
     
         fieldset{
             padding: 15px;
-            border: dotted rgb(233, 223, 241) 3px;
+            border: dotted rgb(255, 255, 255) 5px;
     
             legend{
-                font-size: 20px;
+                font-size: 25px;
                 color: rgb(255, 255, 255);
+                text-align: left;
             }
-    
+            
             label{
                 font-size: 18px;
                 display: inline-block;
                 width: 30%; 
                 text-align: left;
                 margin-right: 10px; 
-                color: rgb(123, 55, 206);
+                color: rgb(115, 0, 255);
             }
     
             input{
@@ -97,7 +99,11 @@
             input::placeholder{
                 color: white
             }
-    
+            
+            .insere{
+                text-align: left;
+            }
+
             button{
                 padding: 10px;
                 background-color: rgb(98, 65, 145);

@@ -3,9 +3,8 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Produtos.scss";
 import { AiFillEdit as Editar } from "react-icons/ai";
-import { MdDeleteForever as Excluir } from "react-icons/md";
-import { MdEditCalendar as Inserir } from "react-icons/md";
-import ModalAction from "../components/ModalAction/ModalAction";
+import ModalActionE from "../components/ModalAction/ModalActionE";
+import ModalActionI from "../components/ModalAction/ModalActionI";
 
 export default function Produtos() {
   document.title = "Lista de Produtos";
@@ -22,15 +21,20 @@ export default function Produtos() {
       .catch((error) => console.log(error));
   }, []);
 
-  const [open, setOpen] = useState(false);
+  const [open, setOpenI] = useState(false);
+  const [abre, setOpenE] = useState(false);
 
 
   return (
     <div>
       <h1 className="h1">Lista de Produtos</h1>
 
-        <ModalAction open={open} setClose={setOpen}/>
-        <div className="botao"><button onClick={()=>setOpen(true)}>INSERIR PRODUTOS</button></div>
+        <ModalActionI openI={open} setCloseI={setOpenI}/>
+        <ModalActionE openE={abre} setCloseE={setOpenE}/>
+        <div className="botoes">
+          <div className="botao"><button onClick={()=>setOpenI(true)}>INSERIR PRODUTOS</button></div>
+          <div className="botao"><button onClick={()=>setOpenE(true)}>EXCLUIR PRODUTOS</button></div>
+        </div>
         
           <div>
             <table className="tblEstilo">
@@ -63,13 +67,6 @@ export default function Produtos() {
               </tfoot>
             </table>
           </div>
-
-      <nav className="inserirExcluir">
-        <ul>
-          <li><Link to="/excluir/produtos" className={rotaAtual.pathname == `/excluir/produtos/`?"active":""}>EXCLUIR</Link></li>
-        </ul>
-      </nav>   
-
     </div>
   )
 }

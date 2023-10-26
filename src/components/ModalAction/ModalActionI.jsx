@@ -1,10 +1,8 @@
 import "./ModalAction.scss";
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
-export default function ModalAction(props){
+export default function ModalActionI(props){
     
-    const navigate = useNavigate();
     const [produto, setProduto] = useState({
         nome: '',
         desc: '',
@@ -32,19 +30,20 @@ export default function ModalAction(props){
         .then(response => console.log("STATUS DA INSERÇÃO : " + response.status))
         .catch(error=> console.log(error))
         
-        props.setClose(false);
+        props.setCloseI(false);
 
           // Recarregar a página
         window.location.reload();
     }
     
-    if(props.open){return(
+    if(props.openI){return(
         <div className="modal">
             <div className='tudo'>
             <h1>INSERIR PRODUTOS</h1>
-            <div className="botao"><button onClick={()=>props.setClose(false)}>SAIR</button></div>
+            <div className="botao"><button onClick={()=>props.setCloseI(false)}>SAIR</button></div>
                 <form onSubmit={handleSubmit}>
                     <fieldset>
+                    
                     <legend>Produto a ser Inserido:</legend>
 
                     <div>
@@ -83,7 +82,7 @@ export default function ModalAction(props){
                         />
                     </div>
 
-                    <div>
+                    <div className="insere">
                         <button type="submit">INSERIR</button>
                     </div>
                     </fieldset>
