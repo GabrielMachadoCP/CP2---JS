@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import "./ModalAction.scss";
 
 function ModalActionE(props) {
-  const navigate = useNavigate();
 
   const [produtos, setProdutos] = useState([]);
   const [produtoId, setProdutoId] = useState('');
@@ -79,4 +78,3 @@ function ModalActionE(props) {
 }
 
 export default ModalActionE;
-
