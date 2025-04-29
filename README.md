@@ -1,8 +1,20 @@
-# React + Vite
+# 🛒 Projeto de Listagem de Produtos - React + SCSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é uma aplicação web simples construída com **React** e **SCSS**, com foco na organização de componentes reutilizáveis e consumo de uma API externa simulada (ou estrutura interna de produtos).
 
-Currently, two official plugins are available:
+## 📂 Estrutura do Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## 🚀 Funcionalidades
+
+- Visualização de produtos
+- Layout limpo e componentizado
+- Estilo modular com SCSS
+- Base para integração futura com APIs REST
+
+## 🛠️ Tecnologias Utilizadas
+
+- React
+- SCSS (Sass)
+- JavaScript (ES6+)
+- Estrutura modular de componentes
